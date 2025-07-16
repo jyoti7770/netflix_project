@@ -50,3 +50,29 @@ group by type;
 ```
 - To determine the distribution of content types on Netflix
 
+### 2.find the most common rating for movies and TV shows.
+```sql
+
+select type,rating
+from
+(select type,rating,count(*),
+rank() over(partition by type order by count(*) desc)as ranking
+from netflix
+group by type,rating)as T1
+where ranking=1;
+```
+- To identify the most frequently occurring rating for each type of content.
+
+### 3. Name top 10 countries which deliver highest number of movies.
+```sql
+
+select trim(unnest(string_to_array(country,','))) as country,
+count(*) as number_of_movies
+from netflix 
+where type ilike 'movie'
+group by country
+order by number_of_movies desc
+limit 10;
+```
+- to identify the top 10 countries with the highest number of content items
+
