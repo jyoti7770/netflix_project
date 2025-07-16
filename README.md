@@ -50,7 +50,7 @@ group by type;
 ```
 - To determine the distribution of content types on Netflix
 
-### 2.find the most common rating for movies and TV shows.
+### 2.Find the most common rating for movies and TV shows.
 ```sql
 
 select type,rating
@@ -75,4 +75,139 @@ order by number_of_movies desc
 limit 10;
 ```
 - to identify the top 10 countries with the highest number of content items
+
+### 4. find top 10 year which released higher number of movies.
+```sql
+
+select release_year,count(*) as total_number_of_movies
+from netflix
+where type ilike 'movie'
+group by release_year
+order by total_number_of_movies desc
+limit 10;
+```
+- to identify the movies demand over period of time
+
+### 5. find top 10 most common genre on netflix.
+```sql
+
+select trim(unnest(string_to_array(listed_in,','))) genre,
+rank() over(order by count(*) desc) as ranking
+from netflix
+group by genre
+order by count(*) desc
+limit 10;
+```
+- to identify which kind of content people are liking the most
+
+### 6. find top 10 productive director.
+```sql
+
+select trim(unnest(string_to_array(director,','))) as director,
+count(*)as total_movies
+from netflix
+group by director
+order by total_movies desc
+limit 10;
+```
+- to identify the demanding directors movies
+
+### 7. find top 10 actors from United States who appeared in the highest number of movies.
+```sql
+select trim(unnest(string_to_array(casts,',')))actors
+from netflix
+where country Ilike 'united%' and type Ilike 'movie'
+group by actors
+order by count(*) desc
+limit 10;
+```
+- to identify the most demanding actors in united states for movies
+
+### 8.find top 10 actors from United States who appeared in the highest number of TV Show.
+```sql
+select trim(unnest(string_to_array(casts,',')))actors
+from netflix
+where country Ilike 'United%' and type Ilike 'TV%'
+group by actors
+order by count(*) desc
+limit 10;
+```
+- to identify the most demanding actors in united states for Tv shows
+
+### 9.find top 10 actors from India who appeared in the highest number of Indian TV Show.
+```sql
+select trim(unnest(string_to_array(casts,',')))actors
+from netflix
+where country Ilike 'india' and type Ilike 'TV%'
+group by actors
+order by count(*) desc
+limit 10;
+```
+- to identify the most demanding actors in india for movies
+
+###10.find top 10 actors from India who appeared in the highest number of Indian Movies.
+```sql
+select trim(unnest(string_to_array(casts,',')))actors
+from netflix
+where country Ilike 'india' and type Ilike 'movie'
+group by actors
+order by count(*) desc
+limit 10
+```
+- to identify the most demanding actors in india for tv shows
+
+###11.Identify the longest movie.
+```sql
+select title,duration from netflix
+where type Ilike 'movie'
+and duration=(select max(duration) from netflix);
+```
+- to identify the movie having longest duration 
+
+###12.List all tv shows with more than 5 Seasons
+```sql
+select type,title
+from netflix
+where type ILike 'TV%'
+AND SPLIT_PART(duration,' ',1)::numeric>5;
+```
+- to identify the tv shows more than 5 seasons 
+
+###13.Find each year and the average number of content released by India on netflix.return top 5 year with highest avg content.
+```sql
+select 
+extract(year from to_date(date_added,'month dd,yyyy'))as year ,
+count(*) as yearly_content,
+Round(count(*):: numeric/(select count(*) from netflix where country Ilike'india')::numeric*100,2)as avg_content_per_year
+from netflix
+where country Ilike'india'
+group by year
+order by avg_content_per_year desc
+limit 5;
+```
+- to identify the avg number of content released by india on netflix
+
+###14.Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field.label content containing these keywords as 'not for children below 12'.
+```sql
+with new_table
+as
+(
+ select *,
+ case
+ when 
+ description Ilike '%kill%' or
+ description Ilike '%violence'or
+ description Ilike '%sexual%' or
+ description Ilike '%hot%'
+ then 'Not for children below 12'
+ else 'good_content'
+ end category
+ from netflix
+)
+select title,category
+from new_table
+group by title,category;
+```
+- to identify which content would not be good for children below age 12
+  
 
