@@ -17,6 +17,8 @@ The Data for this project is taken from kaggle dataset:
 
 -**Dataset Link:**[Movies Dataset](https://www.kaggle.com/datasets/ozcanrec/netflix-analysis)
 
+## Schema
+
 ```sql
 drop table if exist netflix
 create table netflix
