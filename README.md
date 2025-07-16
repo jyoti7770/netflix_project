@@ -156,7 +156,7 @@ limit 10
 ```
 - to identify the most demanding actors in india for tv shows
 
-###11.Identify the longest movie.
+### 11.Identify the longest movie.
 ```sql
 select title,duration from netflix
 where type Ilike 'movie'
@@ -164,7 +164,7 @@ and duration=(select max(duration) from netflix);
 ```
 - to identify the movie having longest duration 
 
-###12.List all tv shows with more than 5 Seasons
+### 12.List all tv shows with more than 5 Seasons
 ```sql
 select type,title
 from netflix
@@ -173,7 +173,7 @@ AND SPLIT_PART(duration,' ',1)::numeric>5;
 ```
 - to identify the tv shows more than 5 seasons 
 
-###13.Find each year and the average number of content released by India on netflix.return top 5 year with highest avg content.
+### 13.Find each year and the average number of content released by India on netflix.return top 5 year with highest avg content.
 ```sql
 select 
 extract(year from to_date(date_added,'month dd,yyyy'))as year ,
@@ -187,7 +187,7 @@ limit 5;
 ```
 - to identify the avg number of content released by india on netflix
 
-###14.Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field.label content containing these keywords as 'not for children below 12'.
+### 14.Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field.label content containing these keywords as 'not for children below 12'.
 ```sql
 with new_table
 as
