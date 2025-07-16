@@ -36,4 +36,17 @@ create table netflix
  listed_in	varchar(100),
  description varchar(250)
 );
+```
+
+## Business Problems and Solutions
+
+### 1.count the number of movies vs tv shows
+
+```sql
+select type,
+count(*)
+from netflix
+group by type;
+```
+- To determine the distribution of content types on Netflix
 
