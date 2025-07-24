@@ -63,7 +63,7 @@ where ranking=1;
 ```
 - To identify the most frequently occurring rating for each type of content.
 
-### 3. Name top 10 countries which deliver highest number of movies.
+### 3.Name top 10 countries which deliver highest number of movies.
 ```sql
 
 select trim(unnest(string_to_array(country,','))) as country,
@@ -76,7 +76,7 @@ limit 10;
 ```
 - to identify the top 10 countries with the highest number of content items
 
-### 4. find top 10 year which released higher number of movies.
+### 4.Find top 10 year which released higher number of movies.
 ```sql
 
 select release_year,count(*) as total_number_of_movies
@@ -88,7 +88,7 @@ limit 10;
 ```
 - to identify the movies demand over period of time
 
-### 5. find top 10 most common genre on netflix.
+### 5.Find top 10 most common genre on netflix.
 ```sql
 
 select trim(unnest(string_to_array(listed_in,','))) genre,
@@ -100,7 +100,7 @@ limit 10;
 ```
 - to identify which kind of content people are liking the most
 
-### 6. find top 10 productive director.
+### 6.Find top 10 productive director.
 ```sql
 
 select trim(unnest(string_to_array(director,','))) as director,
@@ -112,7 +112,7 @@ limit 10;
 ```
 - to identify the demanding directors movies
 
-### 7. find top 10 actors from United States who appeared in the highest number of movies.
+### 7.Find top 10 actors from United States who appeared in the highest number of movies.
 ```sql
 select trim(unnest(string_to_array(casts,',')))actors
 from netflix
@@ -123,7 +123,7 @@ limit 10;
 ```
 - to identify the most demanding actors in united states for movies
 
-### 8.find top 10 actors from United States who appeared in the highest number of TV Show.
+### 8.Find top 10 actors from United States who appeared in the highest number of TV Show.
 ```sql
 select trim(unnest(string_to_array(casts,',')))actors
 from netflix
@@ -134,7 +134,7 @@ limit 10;
 ```
 - to identify the most demanding actors in united states for Tv shows
 
-### 9.find top 10 actors from India who appeared in the highest number of Indian TV Show.
+### 9.Find top 10 actors from India who appeared in the highest number of Indian TV Show.
 ```sql
 select trim(unnest(string_to_array(casts,',')))actors
 from netflix
@@ -145,7 +145,7 @@ limit 10;
 ```
 - to identify the most demanding actors in india for movies
 
-### 10.find top 10 actors from India who appeared in the highest number of Indian Movies.
+### 10.Find top 10 actors from India who appeared in the highest number of Indian Movies.
 ```sql
 select trim(unnest(string_to_array(casts,',')))actors
 from netflix
@@ -210,7 +210,7 @@ group by title,category;
 ```
 - to identify which content would not be good for children below age 12
 
-## Finding and Conclusion
+## Finding
 
 - Content Distribution: The dataset contains a diverse range of movies and TV shows with varying ratings and genres.
 
@@ -220,6 +220,8 @@ group by title,category;
 
 - Content Categorization: Categorizing content based on specific keywords helps in understanding the nature of content available on Netflix.
 
-This analysis provides a comprehensive view of Netflix's content and can help inform content strategy and decision-making.
+## Conclusion
+
+- This analysis offers a comprehensive view of the content and supports decision-making by identifying the types of content that can enhance user engagement on Netflix
   
 
