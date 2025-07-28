@@ -65,7 +65,9 @@ where ranking=1;
 ```
 - To identify the most frequently occurring rating for each type of content.
 
-### 3.Name top 10 countries which deliver highest number of movies.
+![image]()
+
+### 3.Name top 5 countries which deliver highest number of movies.
 ```sql
 
 select trim(unnest(string_to_array(country,','))) as country,
@@ -74,11 +76,13 @@ from netflix
 where type ilike 'movie'
 group by country
 order by number_of_movies desc
-limit 10;
+limit 5;
 ```
 - to identify the top 10 countries with the highest number of content items
 
-### 4.Find top 10 year which released higher number of movies.
+![image]()
+
+### 4.Find top 5 year which released higher number of movies.
 ```sql
 
 select release_year,count(*) as total_number_of_movies
@@ -86,11 +90,13 @@ from netflix
 where type ilike 'movie'
 group by release_year
 order by total_number_of_movies desc
-limit 10;
+limit 5;
 ```
 - to identify the movies demand over period of time
 
-### 5.Find top 10 most common genre on netflix.
+![image]()
+
+### 5.Find top 5 most common genre on netflix.
 ```sql
 
 select trim(unnest(string_to_array(listed_in,','))) genre,
@@ -98,11 +104,13 @@ rank() over(order by count(*) desc) as ranking
 from netflix
 group by genre
 order by count(*) desc
-limit 10;
+limit 5;
 ```
 - to identify which kind of content people are liking the most
 
-### 6.Find top 10 productive director.
+![image]()
+
+### 6.Find top 5 productive director.
 ```sql
 
 select trim(unnest(string_to_array(director,','))) as director,
@@ -110,53 +118,63 @@ count(*)as total_movies
 from netflix
 group by director
 order by total_movies desc
-limit 10;
+limit 5;
 ```
 - to identify the demanding directors movies
 
-### 7.Find top 10 actors from United States who appeared in the highest number of movies.
+![image]()
+
+### 7.Find top 5 actors from United States who appeared in the highest number of movies.
 ```sql
 select trim(unnest(string_to_array(casts,',')))actors
 from netflix
 where country Ilike 'united%' and type Ilike 'movie'
 group by actors
 order by count(*) desc
-limit 10;
+limit 5;
 ```
 - to identify the most demanding actors in united states for movies
 
-### 8.Find top 10 actors from United States who appeared in the highest number of TV Show.
+![image]()
+
+### 8.Find top 5 actors from United States who appeared in the highest number of TV Show.
 ```sql
 select trim(unnest(string_to_array(casts,',')))actors
 from netflix
 where country Ilike 'United%' and type Ilike 'TV%'
 group by actors
 order by count(*) desc
-limit 10;
+limit 5;
 ```
 - to identify the most demanding actors in united states for Tv shows
 
-### 9.Find top 10 actors from India who appeared in the highest number of Indian TV Show.
+![image]()
+
+### 9.Find top 5 actors from India who appeared in the highest number of Indian TV Show.
 ```sql
 select trim(unnest(string_to_array(casts,',')))actors
 from netflix
 where country Ilike 'india' and type Ilike 'TV%'
 group by actors
 order by count(*) desc
-limit 10;
+limit 5;
 ```
 - to identify the most demanding actors in india for movies
 
-### 10.Find top 10 actors from India who appeared in the highest number of Indian Movies.
+![image]()
+
+### 10.Find top 5 actors from India who appeared in the highest number of Indian Movies.
 ```sql
 select trim(unnest(string_to_array(casts,',')))actors
 from netflix
 where country Ilike 'india' and type Ilike 'movie'
 group by actors
 order by count(*) desc
-limit 10
+limit 5;
 ```
 - to identify the most demanding actors in india for tv shows
+
+![image]()
 
 ### 11.Identify the longest movie.
 ```sql
@@ -164,7 +182,9 @@ select title,duration from netflix
 where type Ilike 'movie'
 and duration=(select max(duration) from netflix);
 ```
-- to identify the movie having longest duration 
+- to identify the movie having longest duration
+
+![image]()
 
 ### 12.List all tv shows with more than 5 Seasons
 ```sql
@@ -173,7 +193,9 @@ from netflix
 where type ILike 'TV%'
 AND SPLIT_PART(duration,' ',1)::numeric>5;
 ```
-- to identify the tv shows more than 5 seasons 
+- to identify the tv shows more than 5 seasons
+
+![image]() 
 
 ### 13.Find each year and the average number of content released by India on netflix.return top 5 year with highest avg content.
 ```sql
@@ -188,6 +210,8 @@ order by avg_content_per_year desc
 limit 5;
 ```
 - to identify the avg number of content released by india on netflix
+
+![image]()
 
 ### 14.Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field.label content containing these keywords as 'not for children below 12'.
 ```sql
@@ -211,6 +235,8 @@ from new_table
 group by title,category;
 ```
 - to identify which content would not be good for children below age 12
+
+![image]()
 
 ## Finding
 
