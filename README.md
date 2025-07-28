@@ -49,7 +49,7 @@ from netflix
 group by type;
 ```
 - To determine the distribution of content types on Netflix
-![image]()
+![image](https://github.com/jyoti7770/netflix_project/blob/main/movies%20vs%20tv%20shows.png)
 ### 2.Find the most common rating for movies and TV shows.
 ```sql
 
