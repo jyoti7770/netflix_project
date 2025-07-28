@@ -65,7 +65,7 @@ where ranking=1;
 ```
 - To identify the most frequently occurring rating for each type of content.
 
-![image]()
+![image](https://github.com/jyoti7770/netflix_project/blob/main/rating.png)
 
 ### 3.Name top 5 countries which deliver highest number of movies.
 ```sql
