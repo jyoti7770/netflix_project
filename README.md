@@ -78,9 +78,9 @@ group by country
 order by number_of_movies desc
 limit 5;
 ```
-- to identify the top 10 countries with the highest number of content items
+- to identify the top 5 countries with the highest number of content items
 
-![image]()
+![image](https://github.com/jyoti7770/netflix_project/blob/main/top%20countries.png)
 
 ### 4.Find top 5 year which released higher number of movies.
 ```sql
