@@ -108,7 +108,7 @@ limit 5;
 ```
 - to identify which kind of content people are liking the most
 
-![image]()
+![image](https://github.com/jyoti7770/netflix_project/blob/main/genre.png)
 
 ### 6.Find top 5 productive director.
 ```sql
