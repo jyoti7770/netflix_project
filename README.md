@@ -122,7 +122,7 @@ limit 5;
 ```
 - to identify the demanding directors movies
 
-![image]()
+![image](https://github.com/jyoti7770/netflix_project/blob/main/director.png)
 
 ### 7.Find top 5 actors from United States who appeared in the highest number of movies.
 ```sql
