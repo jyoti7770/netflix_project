@@ -148,7 +148,7 @@ limit 5;
 ```
 - to identify the most demanding actors in united states for Tv shows
 
-![image]()
+![image](https://github.com/jyoti7770/netflix_project/blob/main/tv%20shows%20actor%20united%20state.png)
 
 ### 9.Find top 5 actors from India who appeared in the highest number of Indian TV Show.
 ```sql
