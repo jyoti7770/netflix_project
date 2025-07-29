@@ -174,7 +174,7 @@ limit 5;
 ```
 - to identify the most demanding actors in india for tv shows
 
-![image]()
+![image](https://github.com/jyoti7770/netflix_project/blob/main/tv%20shows%20actor%20india.png)
 
 ### 11.Identify the longest movie.
 ```sql
