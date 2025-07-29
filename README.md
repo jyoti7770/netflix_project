@@ -135,7 +135,7 @@ limit 5;
 ```
 - to identify the most demanding actors in united states for movies
 
-![image]()
+![image](https://github.com/jyoti7770/netflix_project/blob/main/actor%20united%20states.png)
 
 ### 8.Find top 5 actors from United States who appeared in the highest number of TV Show.
 ```sql
