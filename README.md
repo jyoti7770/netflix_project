@@ -184,7 +184,7 @@ and duration=(select max(duration) from netflix);
 ```
 - to identify the movie having longest duration
 
-![image]()
+![image](https://github.com/jyoti7770/netflix_project/blob/main/movie%20duration.png)
 
 ### 12.List all tv shows with more than 5 Seasons
 ```sql
