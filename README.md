@@ -195,7 +195,7 @@ AND SPLIT_PART(duration,' ',1)::numeric>5;
 ```
 - to identify the tv shows more than 5 seasons
 
-![image]() 
+![image](https://github.com/jyoti7770/netflix_project/blob/main/tv%20shows%20more%20than%205%20season.png) 
 
 ### 13.Find each year and the average number of content released by India on netflix.return top 5 year with highest avg content.
 ```sql
