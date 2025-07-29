@@ -236,7 +236,7 @@ group by title,category;
 ```
 - to identify which content would not be good for children below age 12
 
-![image]()
+![image](https://github.com/jyoti7770/netflix_project/blob/main/good%20content.png)
 
 ## Finding
 
