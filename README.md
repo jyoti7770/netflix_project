@@ -211,7 +211,7 @@ limit 5;
 ```
 - to identify the avg number of content released by india on netflix
 
-![image]()
+![image](https://github.com/jyoti7770/netflix_project/blob/main/avg%20movie%20released%20in%20year%20in%20india.png)
 
 ### 14.Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field.label content containing these keywords as 'not for children below 12'.
 ```sql
