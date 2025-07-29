@@ -161,7 +161,7 @@ limit 5;
 ```
 - to identify the most demanding actors in india for movies
 
-![image]()
+![image](https://github.com/jyoti7770/netflix_project/blob/main/movies%20actor%20india.png)
 
 ### 10.Find top 5 actors from India who appeared in the highest number of Indian Movies.
 ```sql
