@@ -17,8 +17,6 @@ The Data for this project is taken from kaggle dataset:
 
 -**Dataset Link:**[Movies Dataset](https://www.kaggle.com/datasets/ozcanrec/netflix-analysis)
 
--**ANALYSIS:**[Data Analyis](https://github.com/jyoti7770/netflix_project/blob/main/netflix_projects.sql)
-
 ## Schema
 
 ```sql
@@ -240,18 +238,24 @@ group by title,category;
 
 ![image](https://github.com/jyoti7770/netflix_project/blob/main/good%20content.png)
 
+**How to run this project:**[Data Analyis](https://github.com/jyoti7770/netflix_project/blob/main/netflix_projects.sql)
+
+
 ## Finding
 
-- Content Distribution: The dataset contains 60% movies and 40% TV shows with varying ratings and genres.
+- The dataset contains 60% movies and 40% TV shows with varying ratings and genres.
 
-- Common Ratings: Insights into the most common ratings TV-MA (TV-Mature Audience) specifically designed for adults and may not be suitable for children under 17,provide an understanding of the content's target audience.
+- Insights into the most common ratings TV-MA (TV-Mature Audience) specifically designed for adults and may not be suitable for children under 17,provide an understanding of the content's target audience.
 
-- Geographical Insights: The Top 5 Countries and the average content releases by India highlight regional content distribution.
+- The Top 5 Countries and the average content releases by India highlight regional content distribution.
 
-- Content Categorization: Categorizing content based on specific keywords helps in understanding the nature of content available on Netflix.
+- Categorizing content based on specific keywords helps in understanding the nature of content available on Netflix.
 
 ## Conclusion
 
-- This analysis offers a comprehensive view of the content and supports decision-making by identifying the types of content that can enhance user engagement on Netflix
+- Netflix focuses more on movies for its content.
+- The dominance of TV-MA ratings shows a clear target toward mature audiences.
+- United States and India’s high content release reflects Netflix’s investment in regional markets.
+- Genre analysis reveals a diverse library tailored to global tastes.
   
 
