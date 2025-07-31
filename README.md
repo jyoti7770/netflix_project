@@ -244,7 +244,7 @@ group by title,category;
 
 - Content Distribution: The dataset contains 60% movies and 40% TV shows with varying ratings and genres.
 
-- Common Ratings: Insights into the most common ratings TV-MA provide an understanding of the content's target audience.
+- Common Ratings: Insights into the most common ratings TV-MA (TV-Mature Audience) specifically designed for adults and may not be suitable for children under 17,provide an understanding of the content's target audience.
 
 - Geographical Insights: The Top 5 Countries and the average content releases by India highlight regional content distribution.
 
