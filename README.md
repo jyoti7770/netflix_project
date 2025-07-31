@@ -17,7 +17,7 @@ The Data for this project is taken from kaggle dataset:
 
 -**Dataset Link:**[Movies Dataset](https://www.kaggle.com/datasets/ozcanrec/netflix-analysis)
 
--**ANALYSIS:**[Data Analyis]()
+-**ANALYSIS:**[Data Analyis](https://github.com/jyoti7770/netflix_project/blob/main/netflix_projects.sql)
 
 ## Schema
 
