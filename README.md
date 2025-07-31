@@ -244,9 +244,9 @@ group by title,category;
 
 - Content Distribution: The dataset contains 60% movies and 40% TV shows with varying ratings and genres.
 
-- Common Ratings: Insights into the most common ratings provide an understanding of the content's target audience.
+- Common Ratings: Insights into the most common ratings TV-MA provide an understanding of the content's target audience.
 
-- Geographical Insights: The top 5 countries and the average content releases by India highlight regional content distribution.
+- Geographical Insights: The Top 5 Countries and the average content releases by India highlight regional content distribution.
 
 - Content Categorization: Categorizing content based on specific keywords helps in understanding the nature of content available on Netflix.
 
