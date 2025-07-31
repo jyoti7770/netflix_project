@@ -1,6 +1,6 @@
 # Netflix Content Engagement Data Analysis using SQL
 
-![NETFLIX LOGO](https://github.com/jyoti7770/netflix_project/blob/main/The%20Hangover.jpeg)
+![NETFLIX LOGO](https://github.com/jyoti7770/netflix_project/blob/main/THENETFLIX.jpeg)
 
 ## OVERVIEW
 This project involves a comparehensive analysis of Netflix's Movies and TV Shows using content metadata with SQL.The goal is to analyze content trends to offer actionable insights that can shape content strategy.The following README provides a detailed account of the project's objectives,business problems,solutions,findings and conclusions.
