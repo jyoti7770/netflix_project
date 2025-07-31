@@ -242,7 +242,7 @@ group by title,category;
 
 ## Finding
 
-- Content Distribution: The dataset contains a diverse range of movies and TV shows with varying ratings and genres.
+- Content Distribution: The dataset contains 60% movies and 40% TV shows with varying ratings and genres.
 
 - Common Ratings: Insights into the most common ratings provide an understanding of the content's target audience.
 
